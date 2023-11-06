@@ -15,6 +15,10 @@ my_blueprint = Blueprint('my_blueprint', __name__,
 @verify_correct_page
 @verify_session_valid
 def task():
+    return redirect("http://localhost:3000/study_assets/digital-stress-test-published", code=302)
+    # run following redirect on the React.js app to redirect back to BOFS and proceed to questionnaire part.
+    # return redirect("/redirect_next_page") 
+    incorrect = True
     incorrect = None
 
     if request.method == 'POST':
